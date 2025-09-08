@@ -1,0 +1,78 @@
+Parte 1:
+
+1.
+
+SELECT * FROM cliente;
+
+2.
+
+SELECT cliente_nome, cidade FROM cliente;
+
+3.
+
+SELECT conta_numero, saldo FROM conta;
+
+Parte 2:
+
+4.
+
+SELECT cliente_nome 
+FROM cliente
+WHERE cidade = 'Macaé';
+
+5.
+
+SELECT cliente_cod, cliente_nome 
+FROM cliente
+WHERE cliente_cod BETWEEN 5 AND 15;
+
+6.
+SELECT cliente_nome 
+FROM cliente
+WHERE cidade IN ('Niterói', 'Volta Redonda', 'Itaboraí');
+
+7.
+
+SELECT cliente_nome
+FROM cliente
+WHERE cliente_nome LIKE 'F%';
+
+8.
+
+SELECT cliente_nome || ' mora em ' || cidade 
+AS Frase 
+FROM cliente;
+
+Parte 3:
+
+9.
+SELECT conta_numero, saldo
+FROM conta
+WHERE saldo > 9000
+ORDER BY saldo DESC;
+
+10.
+
+SELECT cliente_nome, cidade
+FROM cliente
+WHERE cidade = 'Nova Iguaçu'
+   OR cliente_nome LIKE '%Silva%';
+
+11.
+
+SELECT numero_conta, 
+ROUND(saldo) 
+AS saldo_arredondado
+FROM conta;
+
+12.
+
+SELECT UPPER(nome) 
+AS nome_maiusculo
+FROM cliente;
+
+13.
+
+SELECT cliente_nome, cidade
+FROM cliente
+WHERE cidade NOT IN ('Teresópolis', 'Campos dos Goytacazes');
